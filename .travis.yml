@@ -26,10 +26,7 @@ install:
   - yarn install
 
 script:
-  - export NODE_ENV=production
-  - eslint ./assets/**/*.js
-  - karma start karma.conf.js
-  - flow check
+  - yarn test
   - yarn build
 
 after_success:
