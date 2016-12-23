@@ -1,12 +1,14 @@
 //@flow
 'use strict';
-
+const path = require('path');
+const autoprefixer = require('autoprefixer');
 const OccurenceOrderPlugin = require('webpack/lib/optimize/OccurrenceOrderPlugin');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const AggressiveMergingPlugin = require('webpack/lib/optimize/AggressiveMergingPlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+  context: path.resolve(__dirname, '../'),
   plugins: [
     new OccurenceOrderPlugin(),
     new DedupePlugin(),
@@ -39,12 +41,17 @@ module.exports = {
         loaders: ['babel']
       },
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['style', 'css', 'sass'])
+        test: /\.s?css$/,
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
       }
     ]
   },
   eslint: {
     configFile: './.eslintrc.yml'
-  }
+  },
+  postcss: [autoprefixer],
+  sassLoader: {
+    data: '@import "theme/_config.scss";',
+    includePaths: ['./assets/js', 'node_modules']
+  },
 };
