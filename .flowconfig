@@ -1,7 +1,9 @@
 [ignore]
-.*/node_modules/.*
+
 [include]
 
 [libs]
-
+flow
 [options]
+module.name_mapper='.*\(.json\)' -> 'JsonModule'
+module.name_mapper='.*\(.s?css\)' -> 'CSSModule'
