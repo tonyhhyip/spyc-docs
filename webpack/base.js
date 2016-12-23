@@ -7,12 +7,6 @@ const AggressiveMergingPlugin = require('webpack/lib/optimize/AggressiveMergingP
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    'react-router': 'ReactRouter',
-    marked: 'marked'
-  },
   plugins: [
     new OccurenceOrderPlugin(),
     new DedupePlugin(),

@@ -8,6 +8,13 @@ const merge = require('webpack-merge');
 const config = require('./base');
 
 module.exports = merge.smart({
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    'react-router': 'ReactRouter',
+    marked: 'marked',
+    classnames: 'classnames'
+  },
   devtool: 'source-map',
   plugins: [
     new UglifyPlugin({minimize: true}),
