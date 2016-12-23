@@ -5,5 +5,8 @@
 [libs]
 flow
 [options]
-module.name_mapper='.*\(.json\)' -> 'JsonModule'
-module.name_mapper='.*\(.s?css\)' -> 'CSSModule'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/declare/css.js'
+module.name_mapper.extension='json' -> '<PROJECT_ROOT>/declare/json.js'
+module.name_mapper.extension='png' -> '<PROJECT_ROOT>/declare/assets.js'
+module.name_mapper.extension='jpg' -> '<PROJECT_ROOT>/declare/assets.js'
+module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/declare/assets.js'
