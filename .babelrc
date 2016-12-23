@@ -1,4 +1,4 @@
 {
   "presets": ["es2015", "react"],
-  "plugins": ["transform-strip-types"]
+  "plugins": ["transform-flow-strip-types"]
 }
