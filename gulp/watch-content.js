@@ -3,4 +3,4 @@
 
 const gulp = require('gulp');
 
-gulp.task('watch:content', () => gulp.watch(['./assets/content/**/*.md'], ['content']));
+gulp.task('watch:content', () => gulp.watch(['./docs/**/*.md'], ['content']));
