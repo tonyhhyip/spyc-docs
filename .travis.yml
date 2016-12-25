@@ -22,7 +22,6 @@ addons:
       - g++-4.8
 
 install:
-  - yarn add global gulp eslint flow-bin
   - yarn install
 
 script:
