@@ -1,5 +1,7 @@
 # SPYC Library
 
+[Github](https://github.com/spyc/library)
+
 [![Build Status](https://travis-ci.org/tonyhhyip/library.svg?branch=master)](https://travis-ci.org/tonyhhyip/library)
 
 The version 3 SPYC library website
@@ -8,8 +10,8 @@ The version 3 SPYC library website
 
 Please install the following software:
 
-- node.js (6)
-- npm (3 or above) / yarn (0.17 or above)
+- [node.js](../software/Node.md) (6)
+- [yarn](../software/Yarn.md) (0.17 or above)
 
 ## Project Structure
 
@@ -34,21 +36,20 @@ Please install the following software:
 - [gulp](http://gulpjs.com/) - Auto Building
 - [webpack](https://webpack.github.io/docs/) - Javascript Bundle
 - [BabelJS](https://babeljs.io/) - Javascript Compiling
+- [Karma](https://karma-runner.github.io/1.0/index.html) - Test on Browser
+- [Jasmine](https://jasmine.github.io/) - Test Framework
 
 ## Setup
 
 ```bash
-npm install -g gulp
-npm install
+[sudo] yarn global add gulp
+yarn install
 ```
 
 ## Development
 
 Run the command: `gulp dev`
-A HTTP Server would start and listen on 8080 port and resource would continue building
-Run command `npm run test` for testing
 
-## Production
+A HTTP Server would start and listen on **8080** port and resource would continue building.
 
-1. Run command: `NODE_ENV=production gulp build`
-2. Serve the `public` directory with a HTTP Server (e.g. nginx)
+Run command `yarn test` for testing
