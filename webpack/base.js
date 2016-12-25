@@ -19,7 +19,7 @@ module.exports = {
     app: ['./assets/js/app']
   },
   output: {
-    path: `${__dirname}/public`,
+    path: `${__dirname}/../public`,
     publicPath: './',
     filename: '[name].js'
   },
