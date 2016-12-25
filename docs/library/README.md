@@ -2,7 +2,7 @@
 
 [Github](https://github.com/spyc/library)
 
-[![Build Status](https://travis-ci.org/tonyhhyip/library.svg?branch=master)](https://travis-ci.org/tonyhhyip/library)
+[![Build Status](https://travis-ci.org/spyc/library.svg?branch=master)](https://travis-ci.org/spyc/library)
 
 The version 3 SPYC library website
 
