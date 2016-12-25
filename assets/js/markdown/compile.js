@@ -7,8 +7,12 @@ import marked from 'marked';
 import ReactRender from './ReactRender';
 
 export default function compile(content: string, path: string): Element<*> {
-  const render = new ReactRender({}, path);
-  return <div dangerouslySetInnerHTML={{__html: marked(content, {renderer: render})}} />;
+  const renderer = new ReactRender({}, path);
+  const html = marked(content, {
+    renderer,
+    langPrefix: 'prettyprint lang-'
+  });
+  return <div dangerouslySetInnerHTML={{__html: html}} />;
 }
 
 function ucfirst(str: string): string {
