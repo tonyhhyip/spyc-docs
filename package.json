@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "test": "eslint . && flow check",
+    "test": "eslint . && flow check && karma start karma.conf.js",
     "build": "gulp build",
     "dev": "gulp dev"
   },
