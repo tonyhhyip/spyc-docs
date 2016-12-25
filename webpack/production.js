@@ -13,7 +13,7 @@ module.exports = merge.smart({
     'react-dom': 'ReactDOM',
     'react-router': 'ReactRouter',
     marked: 'marked',
-    classnames: 'classnames'
+    classnames: 'classNames'
   },
   devtool: 'source-map',
   plugins: [
