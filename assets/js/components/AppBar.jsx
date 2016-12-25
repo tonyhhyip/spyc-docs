@@ -1,13 +1,13 @@
 //@flow
 'use strict';
 import AppBar from 'react-toolbox/lib/app_bar';
-import {IconButton} from 'react-toolbox/lib/button';
+import Link from 'react-toolbox/lib/link';
 
 export default function Bar() {
-  const button = (
-    <IconButton icon="home" href="/#/" style={{ color: 'white'}}/>
+  const link = (
+    <Link href="/#/" style={{ opacity: 1}}>SPYC Document</Link>
   );
   return (
-    <AppBar title="SPYC Document" leftIcon={button} fixed flat/>
+    <AppBar title={link} fixed flat/>
   );
 }
