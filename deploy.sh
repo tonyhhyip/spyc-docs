@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-if [ "$TRAVIS_REPO_SLUG" != "spyc/docs" ]; then
-    exit 0
-fi
-
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     exit 0
 fi
