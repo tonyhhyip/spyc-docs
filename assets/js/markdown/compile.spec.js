@@ -9,7 +9,7 @@ describe('Markdown Compile Test', () => {
   it('export normal', () => {
     expect(typeof compile).toBe('function');
     expect(compile.name).toBe('compile');
-    expect(compile.length).toBe(1);
+    expect(compile.length).toBe(2);
 
     expect(typeof ucfirst).toBe('function');
     expect(ucfirst.name).toBe('ucfirst');
