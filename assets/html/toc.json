@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Home",
+    "link": "#/"
+  },
+  {
+    "name": "Software",
+    "link": "#/software/"
+  },
+  {
+    "name": "Library",
+    "link": "#/library/"
+  }
+]

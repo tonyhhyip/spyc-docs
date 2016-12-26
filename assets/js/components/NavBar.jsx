@@ -3,11 +3,12 @@
 import AppBar from 'react-toolbox/lib/app_bar';
 import Link from 'react-toolbox/lib/link';
 
-export default function Bar() {
+export default function NavBar(props: {onMenuClick?: Function}) {
   const link = (
     <Link href="/#/" style={{ opacity: 1, display: 'inherit'}}>SPYC Document</Link>
   );
+
   return (
-    <AppBar title={link} fixed flat/>
+    <AppBar leftIcon="menu" onLeftIconClick={props.onMenuClick || null} title={link} fixed flat/>
   );
 }

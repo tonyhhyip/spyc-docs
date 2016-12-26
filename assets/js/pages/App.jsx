@@ -1,22 +1,21 @@
 //@flow
 'use strict';
 
-require('promise-polyfill');
-require('whatwg-fetch');
-
 import type {Element} from 'react';
 
 type State = {
   loaded: boolean,
   showNotFound: boolean,
   content: string,
-  path: string
+  path: string,
+  menu: boolean
 };
 
 import React from 'react';
 import ProgressBar from 'react-toolbox/lib/progress_bar';
 import NotFound from './NotFound';
-import AppBar from '../components/AppBar';
+import NavBar from '../components/NavBar';
+import Sidebar from '../components/Sidebar';
 import compile from '../markdown/compile';
 import {Card, CardText} from 'react-toolbox/lib/card';
 import {getPath} from '../history';
@@ -30,7 +29,8 @@ class App extends React.Component {
       loaded: false,
       showNotFound: false,
       content: '',
-      path: getPath()
+      path: getPath(),
+      menu: false
     };
   }
 
@@ -43,10 +43,23 @@ class App extends React.Component {
     });
   }
 
+  openMenu() {
+    this.setState({
+      menu: true
+    });
+  }
+
+  closeMenu() {
+    this.setState({
+      menu: false
+    });
+  }
+
   render() {
     return (
       <div>
-        <AppBar />
+        <NavBar onMenuClick={this.openMenu.bind(this)} />
+        <Sidebar active={this.state.menu} handleClose={this.closeMenu.bind(this)} />
         {!this.state.loaded && this.renderProgressBar()}
         {this.state.showNotFound && this.renderNotFound()}
         {this.state.content && this.renderContent()}

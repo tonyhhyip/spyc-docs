@@ -2,5 +2,6 @@
 
 declare type Response = {
   status: number,
-  text(): string
+  text(): string,
+  json(): Object
 }
