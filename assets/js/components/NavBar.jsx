@@ -5,7 +5,7 @@ import Link from 'react-toolbox/lib/link';
 
 export default function NavBar(props: {onMenuClick?: Function}) {
   const link = (
-    <Link href="/#/" style={{ opacity: 1, display: 'inherit'}}>SPYC Document</Link>
+    <Link href="/#/" style={{ opacity: 1, display: 'inline'}}>SPYC Document</Link>
   );
 
   return (
