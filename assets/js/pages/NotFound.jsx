@@ -23,7 +23,7 @@ export default class NotFound extends React.Component {
           Please check if you have the correct URI.
         </CardText>
         <CardActions>
-          <Button label="Back to home page" href="/#/" />
+          <Button label="Back to home page" href="./#/" />
         </CardActions>
       </Card>
     );
