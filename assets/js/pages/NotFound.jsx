@@ -5,17 +5,9 @@ import React from 'react';
 import {Card, CardTitle, CardText, CardActions} from 'react-toolbox/lib/card';
 import {Button} from 'react-toolbox/lib/button';
 
-export default class NotFound extends React.Component {
-  render() {
-    return (
-      <div>
-        {this.renderCard()}
-      </div>
-    );
-  }
-
-  renderCard() {
-    return (
+export default function NotFound() {
+  return (
+    <div>
       <Card style={{marginTop: '8rem'}}>
         <CardTitle title="Not Found"/>
         <CardText>
@@ -26,6 +18,6 @@ export default class NotFound extends React.Component {
           <Button label="Back to home page" href="./#/" />
         </CardActions>
       </Card>
-    );
-  }
+    </div>
+  );
 }
