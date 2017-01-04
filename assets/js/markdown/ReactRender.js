@@ -15,7 +15,7 @@ export default class ReactRender extends Renderer {
     if (href.match(/\/\//)) {
       return super.link(href, title, text);
     }
-    const path = normalResolve(dirname(this.path), href);
+    const path = normalResolve(this.path.endsWith('/') ? this.path : dirname(this.path), href);
     const routerLink = `./#${path}`;
     return super.link(routerLink, title, text);
   }
