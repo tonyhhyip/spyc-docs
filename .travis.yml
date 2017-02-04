@@ -9,7 +9,6 @@ cache: yarn
 env:
   global:
   - CXX=g++-4.8
-  - secure: SJcxd+nd21SJGIYclV4Fcc4meGNR9JyBnZKZKQy1jEV4WvycsMPb/usEvgG0KSgAmxbwTQAnOju1t3ncsB7tgrrEwC6rkCK0Gas5TEDQsFHZvcCQWmtJaBXkc+LwNON/jyvZ5S1qzd+H7vcnUo1ebVUiv3CKzO30Bei6CXk95W0o9sXqSGmLSYbZvESgUmGstCAF0Hv9MwFmgrdxquUoQyGKiIC+Jd3Hl8C6ZNkzt1MK9DeUhcvgwF0HnGlfhW5nTOUQKKoW5pboiejO+YUlXeSwDjkiYaFOPgD4AMEe4crrpmy/7WegOB/2NSOb7PousoaV8T6LALr2ss8ZUJGdPTyU54uEL3qN0cbnBCxwiRznD5BEiFZovPH7c6QSHpZW8m+MoYIslaKo2GBH4ggBVB3F/cxHTjuO0u64bvNZ7uW8uLLdM2RWwdxZUPE+bu0eaXnukU40qlP0UxkOjwq2poAxOO9IPA616O0aNHFoPlQcRAOEyChvnB+lyUJinXKqp+LEDmxozH6HiuWxzPshYy24Aqta+7712VqvfNhMVSNRP0UxYQ09AG6JjzPnbnAsxFHuXGXwnB7hUkGmWIb32Z19hWk6RwFADASv+5nmDMActwENZhIZQWm/8Zk2uX8jREl6dIKl3361bQ0uYpdX0XPzoa0lUoabRtqmBFzbE0k=
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
